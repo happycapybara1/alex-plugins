@@ -1,0 +1,34 @@
+{
+  "name": "alex",
+  "description": "Alex's Claude Code plugins. alex-ring asks before loading alex-superpowers and alex-ponytail, and alex-i-have-adhd turns on when you say \"adhd mode\".",
+  "owner": {
+    "name": "happycapybara1",
+    "url": "https://github.com/happycapybara1"
+  },
+  "plugins": [
+    {
+      "name": "alex-ring",
+      "source": "./plugins/alex-ring",
+      "description": "One ring: asks once per session before loading alex-superpowers and alex-ponytail for code work. Installs all three other plugins.",
+      "category": "productivity"
+    },
+    {
+      "name": "alex-superpowers",
+      "source": { "source": "github", "repo": "happycapybara1/alex-superpowers" },
+      "description": "Planning, TDD, debugging and review workflows (fork of obra/superpowers).",
+      "category": "development"
+    },
+    {
+      "name": "alex-ponytail",
+      "source": { "source": "github", "repo": "happycapybara1/alex-ponytail" },
+      "description": "The smallest change that fully solves the task (fork of DietrichGebert/ponytail).",
+      "category": "development"
+    },
+    {
+      "name": "alex-i-have-adhd",
+      "source": { "source": "github", "repo": "happycapybara1/alex-i-have-adhd" },
+      "description": "Action-first replies for ADHD readers (fork of ayghri/i-have-adhd).",
+      "category": "productivity"
+    }
+  ]
+}

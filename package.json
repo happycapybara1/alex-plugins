@@ -1,0 +1,8 @@
+{
+  "name": "alex-plugins",
+  "private": true,
+  "description": "Alex's Claude Code marketplace and the alex-ring plugin.",
+  "scripts": {
+    "test": "node --test tests/*.test.js"
+  }
+}

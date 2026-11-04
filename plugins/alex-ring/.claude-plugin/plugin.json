@@ -1,0 +1,11 @@
+{
+  "name": "alex-ring",
+  "version": "0.1.0",
+  "description": "Asks once per session before loading alex-superpowers and alex-ponytail for code work; alex-i-have-adhd turns on when you say \"adhd mode\".",
+  "author": {
+    "name": "happycapybara1"
+  },
+  "homepage": "https://github.com/happycapybara1/alex-plugins",
+  "repository": "https://github.com/happycapybara1/alex-plugins",
+  "dependencies": ["alex-superpowers", "alex-ponytail", "alex-i-have-adhd"]
+}
