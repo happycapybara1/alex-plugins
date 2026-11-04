@@ -59,8 +59,13 @@ test('the marketplace lists the ring and the three plugins it depends on', () =>
   assert.deepEqual(names, ['alex-ring', 'alex-superpowers', 'alex-ponytail', 'alex-i-have-adhd']);
   const ringEntry = market.plugins[0];
   assert.equal(ringEntry.source, './plugins/alex-ring');
+  const repos = {
+    'alex-superpowers': 'happycapybara1/superpowers-alex',
+    'alex-ponytail': 'happycapybara1/ponytail-alex',
+    'alex-i-have-adhd': 'happycapybara1/i-have-adhd-alex',
+  };
   for (const plugin of market.plugins.slice(1)) {
-    assert.deepEqual(plugin.source, { source: 'github', repo: `happycapybara1/${plugin.name}` });
+    assert.deepEqual(plugin.source, { source: 'github', repo: repos[plugin.name] });
   }
   const manifest = readJson('plugins/alex-ring/.claude-plugin/plugin.json');
   assert.equal(manifest.name, 'alex-ring');

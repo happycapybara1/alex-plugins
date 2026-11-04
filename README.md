@@ -5,9 +5,9 @@ My Claude Code marketplace, `alex`, and the `alex-ring` plugin: one install for 
 | Plugin | What it does |
 |---|---|
 | `alex-ring` | Before the first reply that involves code, asks once: "Load superpowers + ponytail for this session?" Yes loads both. Installing it installs the other three. |
-| `alex-superpowers` | Planning, test-first, debugging and review workflows ([repo](https://github.com/happycapybara1/alex-superpowers), fork of obra/superpowers). |
-| `alex-ponytail` | The smallest change that fully solves the task ([repo](https://github.com/happycapybara1/alex-ponytail), fork of DietrichGebert/ponytail). |
-| `alex-i-have-adhd` | Action-first replies. Say "adhd mode" to turn it on, "stop adhd mode" to turn it off ([repo](https://github.com/happycapybara1/alex-i-have-adhd), fork of ayghri/i-have-adhd). |
+| `alex-superpowers` | Planning, test-first, debugging and review workflows ([repo](https://github.com/happycapybara1/superpowers-alex), fork of obra/superpowers). |
+| `alex-ponytail` | The smallest change that fully solves the task ([repo](https://github.com/happycapybara1/ponytail-alex), fork of DietrichGebert/ponytail). |
+| `alex-i-have-adhd` | Action-first replies. Say "adhd mode" to turn it on, "stop adhd mode" to turn it off ([repo](https://github.com/happycapybara1/i-have-adhd-alex), fork of ayghri/i-have-adhd). |
 
 ## Install
 
