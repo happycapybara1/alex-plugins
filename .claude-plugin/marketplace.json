@@ -14,19 +14,19 @@
     },
     {
       "name": "alex-superpowers",
-      "source": { "source": "github", "repo": "happycapybara1/alex-superpowers" },
+      "source": { "source": "url", "url": "https://github.com/happycapybara1/alex-superpowers.git" },
       "description": "Planning, TDD, debugging and review workflows (fork of obra/superpowers).",
       "category": "development"
     },
     {
       "name": "alex-ponytail",
-      "source": { "source": "github", "repo": "happycapybara1/alex-ponytail" },
+      "source": { "source": "url", "url": "https://github.com/happycapybara1/alex-ponytail.git" },
       "description": "The smallest change that fully solves the task (fork of DietrichGebert/ponytail).",
       "category": "development"
     },
     {
       "name": "alex-i-have-adhd",
-      "source": { "source": "github", "repo": "happycapybara1/alex-i-have-adhd" },
+      "source": { "source": "url", "url": "https://github.com/happycapybara1/alex-i-have-adhd.git" },
       "description": "Action-first replies for ADHD readers (fork of ayghri/i-have-adhd).",
       "category": "productivity"
     }

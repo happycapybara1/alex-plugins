@@ -69,7 +69,8 @@ test('the marketplace lists the ring and the three plugins it depends on', () =>
     'alex-i-have-adhd': 'happycapybara1/alex-i-have-adhd',
   };
   for (const plugin of market.plugins.slice(1)) {
-    assert.deepEqual(plugin.source, { source: 'github', repo: repos[plugin.name] });
+    // HTTPS on purpose: a github source can clone over SSH, which fails on a PC without GitHub's host key.
+    assert.deepEqual(plugin.source, { source: 'url', url: `https://github.com/${repos[plugin.name]}.git` });
   }
   const manifest = readJson('plugins/alex-ring/.claude-plugin/plugin.json');
   assert.equal(manifest.name, 'alex-ring');
