@@ -3,17 +3,19 @@
 //
 // alex-superpowers and alex-ponytail stay quiet at session start while this
 // plugin is enabled (each checks for it). This tells Claude to ask the user
-// once, before the first coding reply, and to load both on a yes. Plain stdout
+// once, before the first coding reply, with a checkbox per plugin. Plain stdout
 // becomes session context in Claude Code. Never blocks the session.
 
 const INSTRUCTION = [
-  'alex-ring: alex-superpowers and alex-ponytail are installed but not loaded.',
+  'alex-ring: alex-superpowers, alex-ponytail and alex-i-have-adhd are installed but not loaded.',
   'Before your first reply that involves code (writing, changing, reviewing or debugging it, or planning software),',
-  'ask once with Yes/No options (AskUserQuestion): "Load superpowers + ponytail for this session?"',
-  'Yes: load the skills alex-superpowers:using-superpowers and alex-ponytail:ponytail,',
-  'say "Loaded: superpowers, ponytail." in one line, then answer. No: do not ask again this session.',
-  '"code mode" means yes and "no plugins" means no; skip the question once they are loaded.',
-  'With no one to answer, load them and say so.',
+  'ask once with AskUserQuestion, multiSelect true: "Which plugins should I load for this session?"',
+  'Options: "Superpowers" (plan, test first, debug, review), "Ponytail" (smallest change that works),',
+  '"ADHD mode" (action-first replies); leave out any already on.',
+  'Then load what was ticked: Superpowers = skill alex-superpowers:using-superpowers, Ponytail = skill alex-ponytail:ponytail;',
+  'ADHD mode turns on by itself from the answer. Say what is loaded in one line ("Loaded: superpowers, ponytail."), then answer.',
+  'Nothing ticked: do not ask again this session. "code mode" means Superpowers + Ponytail without asking, "no plugins" means none.',
+  'With no one to answer, load Superpowers and Ponytail and say so.',
 ].join(' ');
 
 try {

@@ -9,7 +9,7 @@
     {
       "name": "alex-ring",
       "source": "./plugins/alex-ring",
-      "description": "One ring: asks once per session before loading alex-superpowers and alex-ponytail for code work. Installs all three other plugins.",
+      "description": "One ring: asks once per session which plugins to load (Superpowers, Ponytail, ADHD mode). Installs all three other plugins.",
       "category": "productivity"
     },
     {

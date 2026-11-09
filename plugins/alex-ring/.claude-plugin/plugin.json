@@ -1,7 +1,7 @@
 {
   "name": "alex-ring",
-  "version": "0.1.0",
-  "description": "Asks once per session before loading alex-superpowers and alex-ponytail for code work; alex-i-have-adhd turns on when you say \"adhd mode\".",
+  "version": "0.2.0",
+  "description": "Asks once per session, before the first coding reply, which plugins to load: a checkbox each for Superpowers, Ponytail and ADHD mode.",
   "author": {
     "name": "happycapybara1"
   },

@@ -1,10 +1,10 @@
 # alex-plugins
 
-My Claude Code marketplace, `alex`, and the `alex-ring` plugin: one install for all four plugins, and superpowers and ponytail load only when I say yes.
+My Claude Code marketplace, `alex`, and the `alex-ring` plugin: one install for all four plugins, and each loads only when I tick it.
 
 | Plugin | What it does |
 |---|---|
-| `alex-ring` | Before the first reply that involves code, asks once: "Load superpowers + ponytail for this session?" Yes loads both. Installing it installs the other three. |
+| `alex-ring` | Before the first reply that involves code, asks once which plugins to load, with a checkbox each for Superpowers, Ponytail and ADHD mode. Installing it installs the other three. |
 | `alex-superpowers` | Planning, test-first, debugging and review workflows ([repo](https://github.com/happycapybara1/superpowers-alex), fork of obra/superpowers). |
 | `alex-ponytail` | The smallest change that fully solves the task ([repo](https://github.com/happycapybara1/ponytail-alex), fork of DietrichGebert/ponytail). |
 | `alex-i-have-adhd` | Action-first replies. Say "adhd mode" to turn it on, "stop adhd mode" to turn it off ([repo](https://github.com/happycapybara1/i-have-adhd-alex), fork of ayghri/i-have-adhd). |
@@ -27,9 +27,9 @@ If you installed any of the three from their own marketplaces before, uninstall 
 
 ## How it works
 
-- **Session start:** superpowers, ponytail and i-have-adhd stay quiet. The ring adds about 200 tokens.
-- **First message that looks like code:** Claude asks with Yes/No buttons. Yes: it loads both and says "Loaded: superpowers, ponytail." No: it carries on and doesn't ask again that session.
-- **Shortcuts:** "code mode" loads them without asking; "no plugins" skips them.
+- **Session start:** superpowers, ponytail and i-have-adhd stay quiet. The ring adds about 300 tokens.
+- **First message that looks like code:** Claude asks "Which plugins should I load for this session?" with checkboxes for Superpowers, Ponytail and ADHD mode. It loads what you tick and says so in one line. Nothing ticked: it carries on and doesn't ask again that session.
+- **Shortcuts:** "code mode" loads Superpowers and Ponytail without asking; "no plugins" skips them.
 - **ADHD:** "adhd mode" (or "adhd on") turns it on and Claude confirms in one line; "stop adhd mode" turns it off.
 - **Your own ponytail default wins:** if you set `PONYTAIL_DEFAULT_MODE` or ponytail's config file, ponytail starts at that level.
 - **Without the ring:** disable `alex-ring@alex` and superpowers and ponytail start automatically again, as on their own.

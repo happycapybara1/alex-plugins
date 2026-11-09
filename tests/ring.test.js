@@ -18,13 +18,17 @@ function runHook(input) {
   });
 }
 
-test('the session-start text tells Claude to ask once and what to load on a yes', () => {
+test('the session-start text tells Claude to ask once, with a checkbox per plugin', () => {
   const result = runHook(JSON.stringify({ source: 'startup' }));
   assert.equal(result.status, 0, result.stderr);
   const text = result.stdout;
   for (const phrase of [
     'AskUserQuestion',
-    'Load superpowers + ponytail for this session?',
+    'multiSelect true',
+    'Which plugins should I load for this session?',
+    '"Superpowers"',
+    '"Ponytail"',
+    '"ADHD mode"',
     'alex-superpowers:using-superpowers',
     'alex-ponytail:ponytail',
     'Loaded: superpowers, ponytail.',
@@ -33,7 +37,7 @@ test('the session-start text tells Claude to ask once and what to load on a yes'
   ]) {
     assert.ok(text.includes(phrase), `missing: ${phrase}`);
   }
-  assert.ok(text.split(/\s+/).filter(Boolean).length < 100, 'keep the always-on text short');
+  assert.ok(text.split(/\s+/).filter(Boolean).length < 140, 'keep the always-on text short');
 });
 
 test('the hook never blocks session start, whatever arrives on stdin', () => {
