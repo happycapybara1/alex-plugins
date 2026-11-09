@@ -1,14 +1,14 @@
 {
   "name": "alex",
-  "description": "Alex's Claude Code plugins. alex-ring asks before loading alex-superpowers and alex-ponytail, and alex-i-have-adhd turns on when you say \"adhd mode\".",
+  "description": "Alex's Claude Code plugins. alex-plugins-home asks before loading alex-superpowers and alex-ponytail, and alex-i-have-adhd turns on when you say \"adhd mode\".",
   "owner": {
     "name": "happycapybara1",
     "url": "https://github.com/happycapybara1"
   },
   "plugins": [
     {
-      "name": "alex-ring",
-      "source": "./plugins/alex-ring",
+      "name": "alex-plugins-home",
+      "source": "./plugins/alex-plugins-home",
       "description": "One ring: asks once per session which plugins to load (Superpowers, Ponytail, ADHD mode). Installs all three other plugins.",
       "category": "productivity"
     },

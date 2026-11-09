@@ -1,11 +1,11 @@
 {
-  "name": "alex-ring",
-  "version": "0.2.0",
+  "name": "alex-plugins-home",
+  "version": "0.3.0",
   "description": "Asks once per session, before the first coding reply, which plugins to load: a checkbox each for Superpowers, Ponytail and ADHD mode.",
   "author": {
     "name": "happycapybara1"
   },
-  "homepage": "https://github.com/happycapybara1/alex-plugins",
-  "repository": "https://github.com/happycapybara1/alex-plugins",
+  "homepage": "https://github.com/happycapybara1/alex-plugins-home",
+  "repository": "https://github.com/happycapybara1/alex-plugins-home",
   "dependencies": ["alex-superpowers", "alex-ponytail", "alex-i-have-adhd"]
 }

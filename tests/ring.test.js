@@ -6,7 +6,7 @@ const fs = require('fs');
 const path = require('path');
 
 const root = path.join(__dirname, '..');
-const ring = path.join(root, 'plugins', 'alex-ring');
+const ring = path.join(root, 'plugins', 'alex-plugins-home');
 const readJson = (rel) => JSON.parse(fs.readFileSync(path.join(root, rel), 'utf8'));
 
 function runHook(input) {
@@ -48,7 +48,7 @@ test('the hook never blocks session start, whatever arrives on stdin', () => {
 });
 
 test('hooks.json runs the hook on startup, clear and compact, not on resume', () => {
-  const hooks = readJson('plugins/alex-ring/hooks/hooks.json').hooks;
+  const hooks = readJson('plugins/alex-plugins-home/hooks/hooks.json').hooks;
   assert.deepEqual(Object.keys(hooks), ['SessionStart']);
   const [entry] = hooks.SessionStart;
   assert.equal(entry.matcher, 'startup|clear|compact');
@@ -60,9 +60,9 @@ test('the marketplace lists the ring and the three plugins it depends on', () =>
   const market = readJson('.claude-plugin/marketplace.json');
   assert.equal(market.name, 'alex');
   const names = market.plugins.map((p) => p.name);
-  assert.deepEqual(names, ['alex-ring', 'alex-superpowers', 'alex-ponytail', 'alex-i-have-adhd']);
+  assert.deepEqual(names, ['alex-plugins-home', 'alex-superpowers', 'alex-ponytail', 'alex-i-have-adhd']);
   const ringEntry = market.plugins[0];
-  assert.equal(ringEntry.source, './plugins/alex-ring');
+  assert.equal(ringEntry.source, './plugins/alex-plugins-home');
   const repos = {
     'alex-superpowers': 'happycapybara1/alex-superpowers',
     'alex-ponytail': 'happycapybara1/alex-ponytail',
@@ -72,8 +72,8 @@ test('the marketplace lists the ring and the three plugins it depends on', () =>
     // HTTPS on purpose: a github source can clone over SSH, which fails on a PC without GitHub's host key.
     assert.deepEqual(plugin.source, { source: 'url', url: `https://github.com/${repos[plugin.name]}.git` });
   }
-  const manifest = readJson('plugins/alex-ring/.claude-plugin/plugin.json');
-  assert.equal(manifest.name, 'alex-ring');
+  const manifest = readJson('plugins/alex-plugins-home/.claude-plugin/plugin.json');
+  assert.equal(manifest.name, 'alex-plugins-home');
   assert.match(manifest.version, /^\d+\.\d+\.\d+$/);
   assert.deepEqual(manifest.dependencies, names.slice(1));
 });

@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// alex-ring — SessionStart hook.
+// alex-plugins-home — SessionStart hook.
 //
 // alex-superpowers and alex-ponytail stay quiet at session start while this
 // plugin is enabled (each checks for it). This tells Claude to ask the user
@@ -7,7 +7,7 @@
 // becomes session context in Claude Code. Never blocks the session.
 
 const INSTRUCTION = [
-  'alex-ring: alex-superpowers, alex-ponytail and alex-i-have-adhd are installed but not loaded.',
+  'alex-plugins-home: alex-superpowers, alex-ponytail and alex-i-have-adhd are installed but not loaded.',
   'Before your first reply that involves code (writing, changing, reviewing or debugging it, or planning software),',
   'ask once with AskUserQuestion, multiSelect true: "Which plugins should I load for this session?"',
   'Options: "Superpowers" (plan, test first, debug, review), "Ponytail" (smallest change that works),',
