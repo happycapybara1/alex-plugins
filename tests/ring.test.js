@@ -64,9 +64,9 @@ test('the marketplace lists the ring and the three plugins it depends on', () =>
   const ringEntry = market.plugins[0];
   assert.equal(ringEntry.source, './plugins/alex-ring');
   const repos = {
-    'alex-superpowers': 'happycapybara1/superpowers-alex',
-    'alex-ponytail': 'happycapybara1/ponytail-alex',
-    'alex-i-have-adhd': 'happycapybara1/i-have-adhd-alex',
+    'alex-superpowers': 'happycapybara1/alex-superpowers',
+    'alex-ponytail': 'happycapybara1/alex-ponytail',
+    'alex-i-have-adhd': 'happycapybara1/alex-i-have-adhd',
   };
   for (const plugin of market.plugins.slice(1)) {
     assert.deepEqual(plugin.source, { source: 'github', repo: repos[plugin.name] });
